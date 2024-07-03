@@ -1,0 +1,18 @@
+{
+ "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "android": "AMBIENT='local-android' PLATFORM='android' UDID='' DEVICE='' VERSION='' APPPACKAGE='' APPACTIVITY='' npx codeceptjs run --steps --reporter mochawesome",
+    "ios": "AMBIENT='local-ios' PLATFORM='iOS' UDID='8C487B61-78E7-4EA0-A379-487401547673' DEVICE='iPhone 14 Pro Simulator' VERSION='17.2' APP='' npx codeceptjs run --steps  --grep '@falha' ",
+    "browser-android": "AMBIENT='remote-android' DEVICE='' PLATFORM='' VERSION='' npx codeceptjs run --steps --reporter mochawesome",
+    "browser-ios": "AMBIENT='remote-ios' DEVICE='' PLATFORM='' VERSION='' npx codeceptjs run --steps --reporter mochawesome",
+    "appium": "npx appium --base-path=/wd/hub"
+  },
+  "devDependencies": {
+    "axios": "^1.3.6",
+    "codeceptjs": "3.6.4",
+    "codeceptjs-tesults": "^1.1.0",
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3",
+    "webdriverio": "^8.8.1"
+  }
+}

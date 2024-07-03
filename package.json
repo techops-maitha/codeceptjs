@@ -2,7 +2,7 @@
  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "android": "AMBIENT='local-android' PLATFORM='android' UDID='' DEVICE='' VERSION='' APPPACKAGE='' APPACTIVITY='' npx codeceptjs run --steps --reporter mochawesome",
-    "ios": "AMBIENT='local-ios' PLATFORM='iOS' UDID='8C487B61-78E7-4EA0-A379-487401547673' DEVICE='iPhone 14 Pro Simulator' VERSION='17.2' APP='' npx codeceptjs run --steps  --grep '@falha' ",
+    "ios": "AMBIENT='local-ios' PLATFORM='iOS' UDID='8C487B61-78E7-4EA0-A379-487401547673' DEVICE='iPhone 14 Pro Simulator' VERSION='17.2' APP='' npx codeceptjs run --steps --reporter mochawesome ",
     "browser-android": "AMBIENT='remote-android' DEVICE='' PLATFORM='' VERSION='' npx codeceptjs run --steps --reporter mochawesome",
     "browser-ios": "AMBIENT='remote-ios' DEVICE='' PLATFORM='' VERSION='' npx codeceptjs run --steps --reporter mochawesome",
     "appium": "npx appium --base-path=/wd/hub"

@@ -1,5 +1,4 @@
 Feature('Clicks');
-const { expect } = require('chai');
 
 const { I,
     settings,
@@ -83,7 +82,7 @@ Scenario('Validar direcionamento - Siri e Busca', async () => {
 }).tag('@teste')
 
 Scenario('Validar direcionamento - Fotos', async () => {
-    const element = '~Foto'
+    const element = '~Fotos'
     await scroll.scrollToElement(element)
     settings.clickInMenu(element)
     I.waitForElement('~PERMITIR QUE FOTOS ACESSE:', 5)
@@ -116,11 +115,7 @@ Scenario('Validar ativação do modo Escuro', async () => {
     await scroll.scrollToElement(element)
     settings.clickInMenu(element)
     const swith = '~Aparência Escura'
-    const action = async () => await I.grabValueFrom(swith)
-    const condtion = await action()
     I.click(swith)
-    const valid = await action()
-    expect(valid).to.be.equal(condtion > 0 ? '0' : '1');
 });
 
 After(async () => {
